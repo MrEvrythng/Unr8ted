@@ -1,0 +1,298 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unr8ted | Graphic Design Studio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0b0b0b;
+      --bg-light: #161616;
+      --accent: #e63946;
+      --accent-soft: #f1a7a7;
+      --text-main: #f5f5f5;
+      --text-muted: #9e9e9e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-light);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: var(--text-main);
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      padding: 7rem 3rem;
+      text-align: center;
+      background:
+        radial-gradient(circle at top left, rgba(230,57,70,0.15), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(241,167,167,0.12), transparent 45%),
+        linear-gradient(135deg, #0b0b0b, #141414);
+    }
+
+    .hero h2 {
+      font-size: 3.4rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .hero span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 1.5rem auto 2.5rem;
+      color: var(--text-muted);
+    }
+
+    .btn {
+      padding: 0.9rem 2.2rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 5rem 3rem;
+    }
+
+    .services {
+      background: var(--bg-light);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h3 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: linear-gradient(160deg, #0f0f0f, #1b1b1b);
+      padding: 2.2rem;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px) rotate(-0.5deg);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .service-card h4 {
+      margin-bottom: 0.8rem;
+      color: var(--accent);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .portfolio-item {
+      background: #111;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .portfolio-text {
+      padding: 1rem 1.2rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .contact {
+      background: var(--bg-light);
+      text-align: center;
+    }
+
+    .contact p {
+      margin-bottom: 2rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(180deg, #0b0b0b, #050505);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        margin-top: 1rem;
+      }
+
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="Unr8ted.jpeg" alt="Unr8ted Logo" style="height:48px;" />
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Unr8ted <span>Graphic Design</span></h2>
+    <p>Bold. Original. Unr8ted. We create striking visuals that elevate brands and break expectations.</p>
+    <a href="https://www.instagram.com/unr8ted_?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" target="_blank" class="btn">View Our Work</a>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <div class="section-title">
+      <h3>Our Services</h3>
+      <p>Creative solutions tailored to your brand</p>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <h4>Brand Identity</h4>
+        <p>Logos, brand guidelines, and visual systems that define your presence.</p>
+      </div>
+      <div class="service-card">
+        <h4>Digital Design</h4>
+        <p>Web graphics, social media content, and digital ads.</p>
+      </div>
+      <div class="service-card">
+        <h4>Print Design</h4>
+        <p>Posters, flyers, packaging, and merchandise.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="section-title">
+      <h3>Portfolio</h3>
+      <p>Illustration, branding, and visual storytelling</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="605F97C8-1E13-4BFB-B568-63BF1E893B55.jpeg" alt="Unr8ted Arcade Artwork" />
+        <p class="portfolio-text">ARCADE SERIES — A gritty, nostalgic illustration blending retro gaming culture with modern street aesthetics.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="82C82C34-321A-4886-AB7A-95132530B00E.jpeg" alt="Unr8ted Cartoon Illustration" />
+        <p class="portfolio-text">UNR8TED CREW — Bold cartoon-style characters designed with attitude, personality, and animated influence.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="69DA0CD5-B645-4B87-9C38-4D9B619C426D.jpeg" alt="Unr8ted Mixtape Artwork" />
+        <p class="portfolio-text">UNR8TED TAPES VOL. 1 — Narrative-driven cover art combining illustration, branding, and raw storytelling.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h3>Let’s Work Together</h3>
+    <p>For commissions, collaborations, or custom artwork — contact us on Instagram.</p>
+    <p style="font-size:1.1rem; letter-spacing:1px;">@unr8ted_</p>
+    <a href="https://www.instagram.com/unr8ted_?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" target="_blank" class="btn">Send a Message</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2019 Unr8ted Graphic Design. All rights reserved.
+  </footer>
+
+</body>
+</html>
+
